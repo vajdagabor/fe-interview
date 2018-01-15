@@ -1,4 +1,4 @@
-# fe-interview
+# Cleo Frontend Interview
 ## Bills
 
 ### Get started
@@ -23,4 +23,7 @@ Vodafone
 6. Add an action to the bills tab for each bill called "remove bill" which updates the relevant bill's `isBill` flag to `false`. You can use a `PUT` request to `http://rest.learncode.academy/api/cleo/bills/:id` using the id of the bill to update the bill resource.
 7. Add an action to the potential bills tab for each potential bill called "Add as bill" which updates the relevant bill's `isBill` flag to `true`. You can use a `PUT` request to `http://rest.learncode.academy/api/cleo/bills/:id` using the id of the bill to update the bill resource.
 8. After each action, the lists should reflect the changes.
-9.
+
+- Feel free to add LESS or SASS or even CSS.
+- Feel free to add tests for any components written.
+
