@@ -1,19 +1,39 @@
-import React from 'react';
-import {render} from 'react-dom';
-import Screen from './components/screen/screen';
-import {Tabs, TabsPane} from './components/tabs/tabs';
+import React from "react";
+import { render } from "react-dom";
+import Screen from "./components/screen/screen";
+import { Tabs, TabsPane } from "./components/tabs/tabs";
 import "./stylesheets/defaults.scss";
 
 class App extends React.Component {
-  render () {
+  constructor(props) {
+    super(props);
+    this.state = {
+      transactions: []
+    };
+  }
+
+  componentDidMount() {
+    let url = "http://localhost:3000/bills";
+    fetch(url)
+      .then(response => response.json())
+      .then(data => {
+        this.setState({ transactions: data });
+      });
+  }
+
+  render() {
     return (
       <Screen>
         <Tabs>
           <TabsPane label="Bills">
-            Bills: Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis beatae illum tempore at id possimus, laborum voluptas aliquam sapiente dignissimos laudantium perspiciatis odio odit. Officia, aperiam facilis. Facere, voluptatibus perspiciatis?
+            {this.state.transactions.filter(t => t.isBill).map(t => (
+              t.name
+            ))}
           </TabsPane>
           <TabsPane label="Potential">
-            Potential: Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, eos excepturi? Labore quia quas possimus veniam nisi ducimus. Sint asperiores perferendis facilis id quibusdam temporibus repudiandae ea voluptatem dignissimos rem.
+            {this.state.transactions.filter(t => !t.isBill).map(t => (
+              t.name
+            ))}
           </TabsPane>
         </Tabs>
       </Screen>
@@ -21,4 +41,4 @@ class App extends React.Component {
   }
 }
 
-render(<App/>, document.getElementById('app'));
+render(<App />, document.getElementById("app"));
