@@ -20,7 +20,7 @@ class Tabs extends React.Component {
           {this.props.children.map((pane, index) =>
             <button
               key={pane.props.label}
-              className={`c-Tabs__Button${ this.state.active === index ? " c-Tabs__Button--Active" : ""}`}
+              className={`c-Tabs__Button ${ this.state.active === index ? "c-Tabs__Button--Active" : ""}`}
               onClick={() => this.switchToTab(index)}
             >
               {pane.props.label}

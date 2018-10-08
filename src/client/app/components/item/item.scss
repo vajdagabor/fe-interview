@@ -5,7 +5,9 @@
   padding: $space-s 0;
 }
 
-// .c-Item__Header {}
+.c-Item__Header {
+  user-select: none;
+}
 
 .c-Item__Title {
   margin-top: .3em;
@@ -16,4 +18,15 @@
 
 // .c-Item__Secondary {}
 
-// .c-Item__Details {}
+.c-Item__Details {
+  display: none;
+}
+
+
+// Open state
+// ----------
+.c-Item--Open {
+  .c-Item__Details {
+    display: block;
+  }
+}
