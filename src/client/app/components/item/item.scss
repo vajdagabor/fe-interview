@@ -6,7 +6,12 @@
 }
 
 .c-Item__Header {
+  display: flex;
   user-select: none;
+}
+
+.c-Item__Summary {
+  flex-grow: 1;
 }
 
 .c-Item__Title {
@@ -17,6 +22,12 @@
 }
 
 // .c-Item__Secondary {}
+
+.c-Item__Action {
+  display: flex;
+  flex-direction: rows;
+  align-items: center;
+}
 
 .c-Item__Details {
   display: none;

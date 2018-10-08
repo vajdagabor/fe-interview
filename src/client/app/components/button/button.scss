@@ -1,0 +1,19 @@
+@import "../../stylesheets/tokens.scss";
+@import "../../stylesheets/patterns.scss";
+
+
+.c-Button {
+  @include all-caps;
+
+  padding: 5px 1em;
+  border: $line-thin solid $color-accent;
+  border-radius: $radius;
+  font-size: 14px;
+  font-weight: bold;
+  color: $color-accent;
+
+  &:hover {
+    background-color: $color-accent;
+    color: $color-bright;
+  }
+}
