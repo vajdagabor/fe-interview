@@ -1,0 +1,27 @@
+@import "../../stylesheets/tokens.scss";
+
+
+.c-Transactions {
+  margin-top: $space-s;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.c-Transactions__Row {
+  background-color: $color-light;
+  border-bottom: $line-thin solid $color-bright;
+}
+
+.c-Transactions__Date,
+.c-Transactions__Amount {
+  padding: $space-s;
+}
+
+.c-Transactions__Date {
+
+}
+
+.c-Transactions__Amount {
+  font-weight: bold;
+  text-align: right;
+}

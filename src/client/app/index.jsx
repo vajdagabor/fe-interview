@@ -2,6 +2,8 @@ import React from "react";
 import { render } from "react-dom";
 import Screen from "./components/screen/screen";
 import { Tabs, TabsPane } from "./components/tabs/tabs";
+import List from "./components/list/list";
+import Item from "./components/item/item";
 import "./stylesheets/defaults.scss";
 
 class App extends React.Component {
@@ -26,14 +28,18 @@ class App extends React.Component {
       <Screen>
         <Tabs>
           <TabsPane label="Bills">
-            {this.state.transactions.filter(t => t.isBill).map(t => (
-              t.name
-            ))}
+            <List>
+              {this.state.transactions.filter(t => t.isBill).map(t => (
+                <Item key={t.id} data={t} />
+              ))}
+            </List>
           </TabsPane>
           <TabsPane label="Potential">
-            {this.state.transactions.filter(t => !t.isBill).map(t => (
-              t.name
-            ))}
+            <List>
+              {this.state.transactions.filter(t => !t.isBill).map(t => (
+                <Item key={t.id} data={t} />
+              ))}
+            </List>
           </TabsPane>
         </Tabs>
       </Screen>

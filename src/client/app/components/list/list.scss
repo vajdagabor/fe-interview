@@ -1,0 +1,14 @@
+@import "../../stylesheets/tokens.scss";
+
+
+.c-List {
+  max-width: 500px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+// List items
+.c-List > * {
+  border-bottom: $line-thin solid $color-light;
+}

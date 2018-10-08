@@ -1,0 +1,19 @@
+@import "../../stylesheets/tokens.scss";
+
+
+.c-Item {
+  padding: $space-s 0;
+}
+
+// .c-Item__Header {}
+
+.c-Item__Title {
+  margin-top: .3em;
+  margin-bottom: .3em;
+  font-weight: bold;
+  color: $color-dark;
+}
+
+// .c-Item__Secondary {}
+
+// .c-Item__Details {}
