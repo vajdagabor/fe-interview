@@ -1,0 +1,34 @@
+@import "../../stylesheets/tokens.scss";
+@import "../../stylesheets/patterns.scss";
+
+
+.c-Tabs {}
+
+.c-Tabs__Nav {
+  border-bottom: $line-thick solid $color-light;
+}
+
+.c-Tabs__Button {
+  @include all-caps;
+
+  position: relative;
+  bottom: $line-thick * -1;
+  padding-bottom: $line-thick;
+  padding-top: 10px;
+  border-bottom: $line-thick solid transparent;
+  font-size: 14px;
+  font-weight: bold;
+  color: $color-medium;
+
+  &:not(:last-child) {
+    margin-right: $space-m;
+  }
+}
+
+.c-Tabs__Button--Active {
+  border-color: $color-accent;
+}
+
+.c-Tabs__Content {
+  padding-top: 1em;
+}

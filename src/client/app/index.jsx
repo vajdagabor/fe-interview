@@ -8,7 +8,14 @@ class App extends React.Component {
   render () {
     return (
       <Screen>
-        Hello
+        <Tabs>
+          <TabsPane label="Bills">
+            Bills: Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis beatae illum tempore at id possimus, laborum voluptas aliquam sapiente dignissimos laudantium perspiciatis odio odit. Officia, aperiam facilis. Facere, voluptatibus perspiciatis?
+          </TabsPane>
+          <TabsPane label="Potential">
+            Potential: Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, eos excepturi? Labore quia quas possimus veniam nisi ducimus. Sint asperiores perferendis facilis id quibusdam temporibus repudiandae ea voluptatem dignissimos rem.
+          </TabsPane>
+        </Tabs>
       </Screen>
     );
   }
