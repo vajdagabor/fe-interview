@@ -17,11 +17,17 @@
   padding: $space-s;
 }
 
-.c-Transactions__Date {
-
-}
+// .c-Transactions__Date {}
 
 .c-Transactions__Amount {
   font-weight: bold;
   text-align: right;
+  color: $color-dark;
+}
+
+.c-Transactions__Currency {
+  display: inline-block;
+  margin-right: 2px;
+  color: $color-medium;
+  font-size: 12px;
 }
