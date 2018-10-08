@@ -1,0 +1,45 @@
+@import "./tokens.scss";
+
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1;
+  background-color: $color-bright;
+  color: $color-medium;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  -webkit-appearance: none;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background-color: transparent;
+  font-size: 1em;
+  cursor: pointer;
+  white-space: nowrap;
+  user-select: none;
+}
